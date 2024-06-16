@@ -3376,7 +3376,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^2.1.0":
+"clsx@npm:^2.1.0, clsx@npm:^2.1.1":
   version: 2.1.1
   resolution: "clsx@npm:2.1.1"
   checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
@@ -6916,54 +6916,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"password-strength-input@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "password-strength-input@workspace:."
-  dependencies:
-    "@emotion/react": "npm:^11.11.3"
-    "@emotion/styled": "npm:^11.11.5"
-    "@mui/material": "npm:^5.15.2"
-    "@types/jest": "npm:^29.5.12"
-    "@types/react": "npm:^18.2.43"
-    "@types/react-dom": "npm:^18.2.17"
-    "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
-    "@typescript-eslint/parser": "npm:^6.20.0"
-    "@vitejs/plugin-react": "npm:^4.2.1"
-    babel-plugin-module-resolver: "npm:^5.0.0"
-    check-password-complexity: "npm:^1.4.9"
-    copyfiles: "npm:^2.4.1"
-    cspell: "npm:^6.31.1"
-    eslint: "npm:^8.56.0"
-    eslint-config-airbnb: "npm:^19.0.4"
-    eslint-config-airbnb-typescript: "npm:^17.1.0"
-    eslint-config-next: "npm:^14.0.0"
-    eslint-config-prettier: "npm:^9.1.0"
-    eslint-plugin-eslint-comments: "npm:^3.2.0"
-    eslint-plugin-jest: "npm:^28.6.0"
-    eslint-plugin-prefer-arrow-functions: "npm:^3.2.4"
-    eslint-plugin-prettier: "npm:^5.1.3"
-    eslint-plugin-react-hooks: "npm:^4.6.0"
-    eslint-plugin-react-refresh: "npm:^0.4.5"
-    jest: "npm:^29.7.0"
-    markdown-link-check: "npm:^3.12.1"
-    prettier: "npm:^3.2.2"
-    prettier-plugin-organize-imports: "npm:^3.2.4"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    rimraf: "npm:^5.0.5"
-    ts-add-js-extension: "npm:^1.6.4"
-    ts-jest: "npm:^29.1.4"
-    typescript: "npm:^5.2.2"
-    vite: "npm:5.0.8"
-    vite-tsconfig-paths: "npm:^4.3.1"
-  peerDependencies:
-    "@emotion/react": ^11.11.3
-    "@mui/material": ^5.15.2
-    react: ^16.8.0 || ^17.0.2 || ^18.2.0
-    react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
-  languageName: unknown
-  linkType: soft
-
 "nanoid@npm:^3.3.7":
   version: 3.3.7
   resolution: "nanoid@npm:3.3.7"
@@ -7356,6 +7308,55 @@ __metadata:
   checksum: 10c0/297d7af8224f4b5cb7f6617ecdae98eeaed7f8cbd78956c42785e230505d5a4f07cef352af10d3006fa5c1544b76b57784d3a22d861ae071bbc460c649482bf4
   languageName: node
   linkType: hard
+
+"password-strength-input@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "password-strength-input@workspace:."
+  dependencies:
+    "@emotion/react": "npm:^11.11.3"
+    "@emotion/styled": "npm:^11.11.5"
+    "@mui/material": "npm:^5.15.2"
+    "@types/jest": "npm:^29.5.12"
+    "@types/react": "npm:^18.2.43"
+    "@types/react-dom": "npm:^18.2.17"
+    "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
+    "@typescript-eslint/parser": "npm:^6.20.0"
+    "@vitejs/plugin-react": "npm:^4.2.1"
+    babel-plugin-module-resolver: "npm:^5.0.0"
+    check-password-complexity: "npm:^1.4.9"
+    clsx: "npm:^2.1.1"
+    copyfiles: "npm:^2.4.1"
+    cspell: "npm:^6.31.1"
+    eslint: "npm:^8.56.0"
+    eslint-config-airbnb: "npm:^19.0.4"
+    eslint-config-airbnb-typescript: "npm:^17.1.0"
+    eslint-config-next: "npm:^14.0.0"
+    eslint-config-prettier: "npm:^9.1.0"
+    eslint-plugin-eslint-comments: "npm:^3.2.0"
+    eslint-plugin-jest: "npm:^28.6.0"
+    eslint-plugin-prefer-arrow-functions: "npm:^3.2.4"
+    eslint-plugin-prettier: "npm:^5.1.3"
+    eslint-plugin-react-hooks: "npm:^4.6.0"
+    eslint-plugin-react-refresh: "npm:^0.4.5"
+    jest: "npm:^29.7.0"
+    markdown-link-check: "npm:^3.12.1"
+    prettier: "npm:^3.2.2"
+    prettier-plugin-organize-imports: "npm:^3.2.4"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    rimraf: "npm:^5.0.5"
+    ts-add-js-extension: "npm:^1.6.4"
+    ts-jest: "npm:^29.1.4"
+    typescript: "npm:^5.2.2"
+    vite: "npm:5.0.8"
+    vite-tsconfig-paths: "npm:^4.3.1"
+  peerDependencies:
+    "@emotion/react": ^11.11.3
+    "@mui/material": ^5.15.2
+    react: ^16.8.0 || ^17.0.2 || ^18.2.0
+    react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
+  languageName: unknown
+  linkType: soft
 
 "path-exists@npm:^3.0.0":
   version: 3.0.0
