@@ -1,16 +1,15 @@
-.input {
-  width: 100%;
-  padding: 10px 0 10px 10px;
-  /* margin: 10px 0; */
-  border: 1px solid green !important;
-  border-radius: 5px;
-}
-
 .input-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: relative;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  /* margin: 10px 0; */
+  border-radius: 5px;
 }
 
 .icon-button {
@@ -33,4 +32,37 @@
   height: auto;
 
   /* transform: translateY(50%); */
+}
+
+.strength-container {
+  margin-top: 12px;
+}
+
+.strength-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.bars-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  flex: 1;
+}
+
+.bar {
+  /* width: 40px; */
+  flex: 1;
+  height: 5px;
+  border-radius: 5px;
+}
+
+.strength-label {
+  font-size: 14px;
+  font-weight: 500;
 }

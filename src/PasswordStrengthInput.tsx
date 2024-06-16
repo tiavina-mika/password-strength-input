@@ -5,6 +5,7 @@ import Visibility from './icons/Visibility';
 import { CheckOptionResult, checkPasswordComplexity } from 'check-password-complexity';
 
 import './index.css';
+import clsx from 'clsx';
 
 type Strength ={
   label?: string;
@@ -28,19 +29,19 @@ type ColorOption = {
  */
 const defaultColors: ColorOption[] = [
   {
-    color: 'yellow',
+    color: '#F4471D',
     value: 'tooWeak',
   },
   {
-    color: 'pink',
+    color: '#F9811B',
     value: 'weak',
   },
   {
-    color: 'red',
+    color: '#F7CF1F',
     value: 'medium',
   },
   {
-    color: 'green',
+    color: '#3CB824',
     value: 'strong',
   },
 ];
@@ -83,33 +84,15 @@ export type PasswordStrengthInputProps = {
   hidePasswordIcon?: ReactNode;
   showPasswordIcon?: ReactNode;
 };
-interface BarProps extends Pick<PasswordStrengthInputProps, 'inactiveColor'>{
-  color: string;
-  inactive: boolean;
-}
-
-// const Bar = styled('div', {
-//   // Configure which props should be forwarded on DOM
-//   shouldForwardProp: (prop) =>
-//     prop !== 'color' && prop !== 'inactive' && prop !== 'inactiveColor',
-// })<BarProps>(({ theme, color, inactive, inactiveColor }) => {
-//   const defaultInactiveColor = inactiveColor || theme.palette.grey[300];
-//   return {
-//     width: 40,
-//     height: 6,
-//     borderRadius: 6,
-//     backgroundColor: inactive ? defaultInactiveColor : color,
-//   };
-// });
 
 const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInputProps & InputHTMLAttributes<HTMLInputElement> >(({
-  inactiveColor,
   options,
   className,
   barClassName,
   strengthLabelClassName,
   hidePasswordIcon,
   showPasswordIcon,
+  inactiveColor = '#E4E7EC',
   ...rest
 }, ref) => {
   const [strengthOption, setStrengthOption] = useState<CheckOptionResult | null>(null);
@@ -150,32 +133,31 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
       {/* ------------ password strength ------------ */}
       {/* ------------------------------------------- */}
       {strengthOption && (
-        <div>
-        {/* <div sx={{ mt: 0.8 }}> */}
-          <div>
-          {/* <div direction="row" spacing={3} alignItems="center"> */}
+        <div className="strength-container">
+          <div className="strength-content">
             {/*
             * each strength level (4) will have a different color
             * it will be displayed as a bar
             */}
             {/* <div direction="row" spacing={1}> */}
-            <div>
+            <div className="bars-row">
               {defaultColors.map((option: ColorOption, index: number) => (
                 <div
-                  // color={(options as any)?.[option.value]?.color || option.color}
-                  // // the bar color depends on the strength level
-                  // inactive={index + 1 > strengthOption?.score}
-                  // inactiveColor={inactiveColor}
                   key={index}
-                  className={barClassName}
+                  className={clsx(barClassName, 'bar')}
+                  style={{
+                    backgroundColor: (index + 1 > strengthOption?.score)
+                      ? inactiveColor
+                      : (options as any)?.[option.value]?.color || option.color,
+
+                  }}
                 />
                 ))}
             </div>
             {/* label to be displayed depending of the strength level */}
             <span
-              // variant="caption"
-              // sx={{ color: getPasswordStrengthResult(strengthOption?.value, options).color }}
-              className={strengthLabelClassName}
+              className={clsx(strengthLabelClassName, 'strength-label')}
+              style={{ color: getPasswordStrengthResult(strengthOption?.value, options).color }}
             >
               {getPasswordStrengthResult(strengthOption?.value, options).label}
             </span>

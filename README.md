@@ -20,24 +20,12 @@ or
 
 yarn add password-strength-input
 
-```
-Please note that [`@mui/material`](https://mui.com/material-ui/getting-started/installation/) (and their `@emotion/` peers) are peer dependencies, meaning you should ensure they are installed before installing `password-strength-input`.
-
-```shell
-npm install @mui/material @emotion/react @emotion/styled
-```
-or
-```shell
-yarn add @mui/material @emotion/react @emotion/styled
-```
-
 ## Get started
 
 ### Simple usage
 
 ```tsx
 import PasswordStrengthInput from 'password-strength-input';
-import { useState } from "react";
 
 function App() {
   return (
@@ -114,7 +102,6 @@ function App() {
 ```tsx
   <PasswordStrengthInput
     placeholder="Enter your password"
-    // ...other mui TextField props
   />
 ```
 
@@ -130,7 +117,6 @@ See [`example/App.tsx`](https://github.com/tiavina-mika/password-strength-input/
 |className|`string`|empty|custom class name of text input
 |hidePasswordIcon|`ReactNode`|null|custom icon to hide password
 |hidePasswordIcon|`ReactNode`|null|custom icon to show password
-|...otherProps|`TextFieldProps`|null|all mui `TextField` props
 
 ## Contributing
 

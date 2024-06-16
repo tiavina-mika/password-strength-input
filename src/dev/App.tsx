@@ -10,25 +10,25 @@ const App = () => {
         </div>
         <div>
           <PasswordStrengthInput
-            className='input'
-            options={{
-              tooWeak: {
-                label: 'Too weak 1',
-                color: 'red',
-              },
-              weak: {
-                label: 'Weak 1',
-                color: 'yellow',
-              },
-              medium: {
-                label: 'Medium 1',
-                color: 'green',
-              },
-              strong: {
-                label: 'Strong 1',
-                color: 'blue'
-              },
-            }}
+            // className='input'
+            // options={{
+            //   tooWeak: {
+            //     label: 'Too weak 1',
+            //     color: 'red',
+            //   },
+            //   weak: {
+            //     label: 'Weak 1',
+            //     color: 'yellow',
+            //   },
+            //   medium: {
+            //     label: 'Medium 1',
+            //     color: 'green',
+            //   },
+            //   strong: {
+            //     label: 'Strong 1',
+            //     color: 'blue'
+            //   },
+            // }}
           />
         </div>
       </div>
