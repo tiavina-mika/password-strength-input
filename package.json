@@ -1,20 +1,19 @@
 {
-  "name": "mui-password-strength-input",
-  "version": "0.1.7",
-  "description": "A Material-UI password input with password strength indicator",
+  "name": "password-strength-input",
+  "version": "0.0.0",
+  "description": "An HTML password input with password strength indicator",
   "keywords": [
-    "mui",
     "password",
     "check-passowrd-complexity",
     "password-strength",
-    "material-ui",
+    "html-input",
+    "html-password",
     "password-input",
-    "password-strength-bar",
-    "mui-password"
+    "password-strength-bar"
   ],
-  "homepage": "https://github.com/tiavina-mika/mui-password-strength-input",
+  "homepage": "https://github.com/tiavina-mika/password-strength-input",
   "bugs": {
-    "url": "https://github.com/tiavina-mika/mui-password-strength-input/issues"
+    "url": "https://github.com/tiavina-mika/password-strength-input/issues"
   },
   "author": {
     "name": "Tiavina Michael Ralainirina",
