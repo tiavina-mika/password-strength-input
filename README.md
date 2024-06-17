@@ -1,6 +1,6 @@
 # password-strength-input
 
-<p align="center">
+<p align="left">
 A React password input with password strength indicator
 </p>
 
@@ -18,8 +18,7 @@ or
 ```shell
 
 yarn add password-strength-input
-
-## Get started
+```
 
 ### Simple usage
 
@@ -34,7 +33,7 @@ function App() {
 ```
 
 ### Custom labels and bar colors
-#### custom all strength options
+#### customize all strength options
 ```tsx
     <PasswordStrengthInput
       options={{
@@ -94,7 +93,6 @@ function App() {
     showPasswordIcon={<EyeOn />}
   />
 ```
-
 
 ### Material-UI TextField props
 
