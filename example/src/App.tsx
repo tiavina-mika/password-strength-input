@@ -1,47 +1,39 @@
-import TiptapParser from "tiptap-parser";
-
-const html = `
-<h1>Here is an exemple of code</h1>
-<p>This is a stringified html with code</p>
-<br/>
-<pre><code>import Link from 'next/link';
-
-import Title from '@/components/typography/Title';
-
-// some comment here
-
-const NotFound = () =&gt; (
-  &lt;html lang="en"&gt;
-    &lt;body className=""&gt;
-      &lt;div className="flex min-h-screen flex-col items-center justify-center space-y-8"&gt;
-        &lt;Title className="text-4xl font-semibold"&gt;404 - Page Not Found&lt;/Title&gt;
-
-        &lt;div className="space-x-4"&gt;
-          &lt;Link
-            className="text-blue-600 underline duration-300 hover:text-red-500"
-            href="/"
-          &gt;
-            Homepage
-          &lt;/Link&gt;
-          &lt;Link
-            className="text-blue-600 underline duration-300 hover:text-red-500"
-            href="/contact"
-          &gt;
-            Contact Us
-          &lt;/Link&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/body&gt;
-  &lt;/html&gt;
-);
-export default NotFound;
-</code></pre><p></p>
-`;
+import PasswordStrengthInput from 'password-strength-input';
 
 const App = () => {
   return (
-    <TiptapParser content={html} language="tsx" classNames={{ h1ClassName: 'h1'}} />
-  );
-};
+    <div className="app">
+      <div className="app-content">
+        <div>
+          <h1>Password Strength Input</h1>
+          <p>Check the password strength</p>
+        </div>
+        <form>
+          <PasswordStrengthInput
+            className='input'
+            options={{
+              tooWeak: {
+                label: 'Too weak 1',
+                color: 'red',
+              },
+              weak: {
+                label: 'Weak 1',
+                color: 'yellow',
+              },
+              medium: {
+                label: 'Medium 1',
+                color: 'green',
+              },
+              strong: {
+                label: 'Strong 1',
+                color: 'blue'
+              },
+            }}
+          />
+        </form>
+      </div>
+    </div>
+  )
+}
 
-export default App;
+export default App
