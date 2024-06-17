@@ -1,6 +1,6 @@
 {
   "name": "password-strength-input",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A React password input with password strength indicator",
   "keywords": [
     "react",
