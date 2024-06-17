@@ -139,7 +139,6 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
             * each strength level (4) will have a different color
             * it will be displayed as a bar
             */}
-            {/* <div direction="row" spacing={1}> */}
             <div className="bars-row">
               {defaultColors.map((option: ColorOption, index: number) => (
                 <div
@@ -154,13 +153,15 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
                 />
                 ))}
             </div>
-            {/* label to be displayed depending of the strength level */}
-            <span
-              className={clsx(strengthLabelClassName, 'strength-label')}
-              style={{ color: getPasswordStrengthResult(strengthOption?.value, options).color }}
-            >
-              {getPasswordStrengthResult(strengthOption?.value, options).label}
-            </span>
+            {/* label */}
+            <div className="label-container">
+              <span
+                className={clsx(strengthLabelClassName, 'strength-label')}
+                style={{ color: getPasswordStrengthResult(strengthOption?.value, options).color }}
+              >
+                {getPasswordStrengthResult(strengthOption?.value, options).label}
+              </span>
+            </div>
           </div>
         </div>
       )}

@@ -10,13 +10,10 @@ A React password input with password strength indicator
 ## Installation
 
 ```shell
-
 npm install password-strength-input
-
 ```
 or
 ```shell
-
 yarn add password-strength-input
 ```
 

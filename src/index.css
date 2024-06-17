@@ -56,12 +56,14 @@
 }
 
 .bar {
-  /* width: 40px; */
   flex: 1;
   height: 5px;
   border-radius: 5px;
 }
 
+.label-container {
+  min-width: 10%;
+}
 .strength-label {
   font-size: 14px;
   font-weight: 500;
