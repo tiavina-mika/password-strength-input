@@ -1,11 +1,11 @@
 import { ChangeEvent, InputHTMLAttributes, ReactNode, forwardRef, useState } from 'react';
+import clsx from 'clsx';
 
 import VisibilityOff from './icons/VisibilityOff';
 import Visibility from './icons/Visibility';
 import { CheckOptionResult, checkPasswordComplexity } from 'check-password-complexity';
 
 import './index.css';
-import clsx from 'clsx';
 
 type Strength ={
   label?: string;

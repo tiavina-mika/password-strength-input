@@ -8,7 +8,7 @@ const App = () => {
           <h1>Password Strength Input</h1>
           <p>Check the password strength</p>
         </div>
-        <div>
+        <form>
           <PasswordStrengthInput
             // className='input'
             // options={{
@@ -30,7 +30,7 @@ const App = () => {
             //   },
             // }}
           />
-        </div>
+        </form>
       </div>
     </div>
   )

@@ -1,8 +1,7 @@
 # password-strength-input
 
 <p align="center">
-
-A <a href="https://mui.com/material-ui/getting-started/overview/">Material-UI</a> password input with password strength indicator.
+A React password input with password strength indicator
 </p>
 
 
