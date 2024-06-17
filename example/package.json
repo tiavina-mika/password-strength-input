@@ -1,5 +1,5 @@
 {
-  "name": "app-using-tiptap-parser",
+  "name": "app-using-password-strength-input",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,12 +9,12 @@
     "lint": "eslint . --ext ts,tsx --fix --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "clean-cache": "yarn cache clean --all",
-    "upgrade": "yarn add tiptap-parser@latest"
+    "upgrade": "yarn add password-strength-input@latest"
   },
   "dependencies": {
+    "password-strength-input": "^0.1.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tiptap-parser": "^0.0.16"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
