@@ -128,7 +128,6 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
         </button>
       </div>
 
-
       {/* ------------------------------------------- */}
       {/* ------------ password strength ------------ */}
       {/* ------------------------------------------- */}
