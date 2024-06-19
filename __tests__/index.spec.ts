@@ -1,5 +1,5 @@
 // import {describe, expect, test} from '@jest/globals';
-import { getPasswordStrengthResult } from '../PasswordStrengthInput';
+import { getPasswordStrengthResult } from '../src/PasswordStrengthInput';
 
 // ------------ default options ------------ //
 describe('check default labels', () => {
