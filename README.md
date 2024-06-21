@@ -4,6 +4,12 @@
 A React password input with password strength indicator
 </p>
 
+## Demo
+
+- **[CodeSandbox live demo](https://codesandbox.io/p/github/tiavina-mika/password-strength-input-demo)**
+- **[Live demo](https://password-strength-input.netlify.app/)**
+
+<br />
 
 ![Gif](https://github.com/tiavina-mika/password-strength-input/blob/main/screenshots/example.gif)
 
