@@ -1198,7 +1198,7 @@ __metadata:
     eslint-plugin-prettier: "npm:^5.1.3"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.5"
-    password-strength-input: "npm:^0.1.2"
+    password-strength-input: "npm:^0.1.6"
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.2.2"
     react: "npm:^18.2.0"
@@ -4050,16 +4050,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"password-strength-input@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "password-strength-input@npm:0.1.2"
+"password-strength-input@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "password-strength-input@npm:0.1.6"
   dependencies:
     check-password-complexity: "npm:^1.4.9"
     clsx: "npm:^2.1.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.2 || ^18.2.0
     react-dom: ^16.8.0 || ^17.0.2 || ^18.2.0
-  checksum: 10c0/af1fa5e2e25d90b380c33c7f209f960f82150a2a9cd00a4cf1d862fe232dd4abdfeaf51f97264e807cfcb381dad14bf254db24f6d9b4edd1881674aeeb49791e
+  checksum: 10c0/264ed7184906943678e5b070907545635790860d40806493be11f34b357e850699c85830f6f1f97c64dc2888f0fc559cc9da14afb04d804ba4a7c033a06a78a4
   languageName: node
   linkType: hard
 

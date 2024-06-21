@@ -35,41 +35,41 @@ function App() {
 }
 ```
 
-### Custom labels and bar colors
-#### customize all strength options
+### Override labels and bar colors
+#### Override all strength options
 ```tsx
     <PasswordStrengthInput
       options={{
         tooWeak: {
-          label: 'Too weak 2',
+          label: 'Trop faible',
           color: 'red',
         },
         weak: {
-          label: 'Weak 2',
+          label: 'Faible',
           color: 'yellow',
         },
         medium: {
-          label: 'Medium 2',
+          label: 'Moyen',
           color: 'green',
         },
         strong: {
-          label: 'Strong 2',
+          label: 'Fort',
           color: 'blue'
         },
       }}
     />
 ```
 
-#### custom selected strength options
+#### Override only selected strength options
 ```tsx
     <PasswordStrengthInput
       options={{
         tooWeak: {
-          label: 'Too weak 2',
+          label: 'Trop faible',
           color: 'red',
         },
         weak: {
-          label: 'Weak 2',
+          label: 'Faible',
         },
         medium: {
           color: 'green',
@@ -112,11 +112,11 @@ See [`here`](https://github.com/tiavina-mika/password-strength-input/tree/main/e
 |props |type                          | Default value                         | Description |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
 |options|`Options`|null|Options to override colors and labels of each strength
-|barClassName|`string`|empty|custom class name of the each bar indicator
-|strengthLabelClassName|`string`|empty|custom class name of the strength label
-|className|`string`|empty|custom class name of text input
-|hidePasswordIcon|`ReactNode`|null|custom icon to hide password
-|hidePasswordIcon|`ReactNode`|null|custom icon to show password
+|barClassName|`string`|empty|Override each bar indicator styles
+|strengthLabelClassName|`string`|empty|Override strength label class name
+|className|`string`|empty|Class name of text input
+|hidePasswordIcon|`ReactNode`|null|Custom icon to hide password
+|hidePasswordIcon|`ReactNode`|null|Custom icon to show password
 
 ## Contributing
 
