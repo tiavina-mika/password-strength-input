@@ -29,8 +29,12 @@ yarn add password-strength-input
 import PasswordStrengthInput from 'password-strength-input';
 
 function App() {
+  const [password, setPassword] = useState<string>('');
+
+  const handlePasswordChange = (value: string) => setPassword(value);
+
   return (
-    <PasswordStrengthInput />
+    <PasswordStrengthInput value={value} onChange={handlePasswordChange} />
   );
 }
 ```
@@ -84,7 +88,7 @@ function App() {
   <PasswordStrengthInput
     barClassName="!w-[50px]"
     strengthLabelClassName="!text-xl"
-    className="!w-full
+    className="!w-full"
   />
 ```
 
@@ -117,6 +121,7 @@ See [`here`](https://github.com/tiavina-mika/password-strength-input/tree/main/e
 |className|`string`|empty|Class name of text input
 |hidePasswordIcon|`ReactNode`|null|Custom icon to hide password
 |hidePasswordIcon|`ReactNode`|null|Custom icon to show password
+|...others|`HTMLInputElement`|null|All HTML input attributes
 
 ## Contributing
 
