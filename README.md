@@ -101,14 +101,6 @@ function App() {
   />
 ```
 
-### Material-UI TextField props
-
-```tsx
-  <PasswordStrengthInput
-    placeholder="Enter your password"
-  />
-```
-
 See [`here`](https://github.com/tiavina-mika/password-strength-input/tree/main/example) for more examples that use `PasswordStrengthInput`.
 
 ## Props
