@@ -10,7 +10,8 @@ const App = () => {
         </div>
         <form>
           <PasswordStrengthInput
-            className='input'
+            className="input"
+            placeholder="Enter your password"
             options={{
               tooWeak: {
                 label: 'Trop faible',
@@ -26,15 +27,14 @@ const App = () => {
               },
               strong: {
                 label: 'Fort',
-                color: 'blue'
+                color: 'blue',
               },
             }}
-            placeholder="Enter your password"
           />
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
