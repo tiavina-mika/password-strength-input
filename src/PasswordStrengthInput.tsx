@@ -85,7 +85,7 @@ export type PasswordStrengthInputProps = {
   showPasswordIcon?: ReactNode;
 };
 
-const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInputProps & InputHTMLAttributes<HTMLInputElement> >(({
+const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInputProps & InputHTMLAttributes<HTMLInputElement>>(({
   options,
   className,
   barClassName,
@@ -97,7 +97,6 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
 }, ref) => {
   const [strengthOption, setStrengthOption] = useState<CheckOptionResult | null>(null);
   const [showPassword, setShowPassword] = useState<boolean>(false);
-
 
   const toggleShowPassword = () => setShowPassword(!showPassword);
 

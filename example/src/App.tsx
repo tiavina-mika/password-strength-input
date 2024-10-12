@@ -13,22 +13,23 @@ const App = () => {
             className='input'
             options={{
               tooWeak: {
-                label: 'Too weak 1',
+                label: 'Trop faible',
                 color: 'red',
               },
               weak: {
-                label: 'Weak 1',
+                label: 'Faible',
                 color: 'yellow',
               },
               medium: {
-                label: 'Medium 1',
+                label: 'Moyen',
                 color: 'green',
               },
               strong: {
-                label: 'Strong 1',
+                label: 'Fort',
                 color: 'blue'
               },
             }}
+            placeholder="Enter your password"
           />
         </form>
       </div>
