@@ -24,16 +24,19 @@ describe('check default labels', () => {
 describe('check override labels', () => {
   test('custom label', () => {
     const option = getPasswordStrengthResult('tooWeak', { tooWeak: { label: 'Too weak 2' } });
+
     expect(option.label).toBe('Too weak 2');
   });
 
   test('custom color', () => {
     const option = getPasswordStrengthResult('medium', { medium: { color: 'red' } });
+
     expect(option.color).toBe('red');
   });
 
   test('custom color and label', () => {
     const option = getPasswordStrengthResult('strong', { strong: { color: 'red', label: 'Strong 2' } });
+
     expect(option.label).toBe('Strong 2');
     expect(option.color).toBe('red');
   });
