@@ -1,4 +1,6 @@
-import { ChangeEvent, InputHTMLAttributes, ReactNode, forwardRef, useState } from 'react';
+import {
+  ChangeEvent, InputHTMLAttributes, ReactNode, forwardRef, useState,
+} from 'react';
 import clsx from 'clsx';
 
 import VisibilityOff from './icons/VisibilityOff';
@@ -7,21 +9,21 @@ import { CheckOptionResult, checkPasswordComplexity } from 'check-password-compl
 
 import './index.css';
 
-type Strength ={
+type Strength = {
   label?: string;
   color?: string;
-}
+};
 type Options = {
   tooWeak?: Strength;
   weak?: Strength;
   medium?: Strength;
   strong?: Strength;
-}
+};
 
 type ColorOption = {
   color: string;
   value: string;
-}
+};
 
 /**
  * Colors for the password strength bar
@@ -46,34 +48,34 @@ const defaultColors: ColorOption[] = [
   },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const getPasswordStrengthResult = (strength: CheckOptionResult['value'], options?: Options): Strength => {
   const option = options?.[strength];
 
   // default options
   switch (strength) {
-
     case 'tooWeak':
       return {
         label: option?.label || 'Too weak',
-        color: option?.color || defaultColors[0].color
+        color: option?.color || defaultColors[0].color,
       };
     case 'weak':
       return {
         label: option?.label || 'Weak',
-        color: option?.color || defaultColors[1].color
+        color: option?.color || defaultColors[1].color,
       };
     case 'medium':
       return {
         label: option?.label || 'Okay',
-        color: option?.color || defaultColors[2].color
+        color: option?.color || defaultColors[2].color,
       };
     default:
       return {
         label: option?.label || 'Strong',
-        color: option?.color || defaultColors[3].color
+        color: option?.color || defaultColors[3].color,
       };
   }
-}
+};
 
 export type PasswordStrengthInputProps = {
   className?: string;
@@ -85,7 +87,10 @@ export type PasswordStrengthInputProps = {
   showPasswordIcon?: ReactNode;
 };
 
-const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInputProps & InputHTMLAttributes<HTMLInputElement>>(({
+const PasswordStrengthInput = forwardRef<
+  HTMLInputElement,
+  PasswordStrengthInputProps & InputHTMLAttributes<HTMLInputElement>
+>(({
   options,
   className,
   barClassName,
@@ -96,14 +101,15 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
   ...rest
 }, ref) => {
   const [strengthOption, setStrengthOption] = useState<CheckOptionResult | null>(null);
-  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
 
-  const toggleShowPassword = () => setShowPassword(!showPassword);
+  const toggleShowPassword = () => setIsPasswordVisible(!isPasswordVisible);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
 
     const result = checkPasswordComplexity(value);
+
     setStrengthOption(result);
 
     rest.onChange?.(event);
@@ -116,14 +122,13 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
           ref={ref}
           {...rest}
           className={className}
-          type={showPassword ? 'text' : 'password'}
+          type={isPasswordVisible ? 'text' : 'password'}
           onChange={handleChange}
         />
-        <button type="button" onClick={toggleShowPassword} className="icon-button">
-          {showPassword
+        <button className="icon-button" type="button" onClick={toggleShowPassword}>
+          {isPasswordVisible
             ? (hidePasswordIcon || <VisibilityOff />)
-            : (showPasswordIcon || <Visibility />)
-          }
+            : (showPasswordIcon || <Visibility />)}
         </button>
       </div>
 
@@ -149,7 +154,7 @@ const PasswordStrengthInput =  forwardRef<HTMLInputElement, PasswordStrengthInpu
 
                   }}
                 />
-                ))}
+              ))}
             </div>
             {/* label */}
             <div className="label-container">
